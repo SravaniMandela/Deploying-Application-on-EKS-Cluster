@@ -1,3 +1,4 @@
+#cluster_role.tf
 resource "aws_iam_role" "eks_cluster_role" {
   name = "eks-cluster-role"
 
@@ -8,7 +9,7 @@ resource "aws_iam_role" "eks_cluster_role" {
         "Effect": "Allow",
         "Principal": {
           "Service": "eks.amazonaws.com"
-        },
+        }
         "Action": "sts:AssumeRole"
       }
     ]
